@@ -35,7 +35,8 @@ h2 {
 
 .projects,
 .experience,
-.skills{
+.skills,
+.achi{
     display: flex;
     overflow-x:visible;
     padding-bottom: 20px; /* Increased padding for more space at the bottom */
@@ -45,7 +46,8 @@ h2 {
 
 .project,
 .job,
-.skill{
+.skill,
+.achi{
     flex: 0 0 auto;
     width: 75%;
     margin-right: 20px;
@@ -58,13 +60,27 @@ h2 {
     justify-content: space-between;
 }
 .projects,
-.experience
+.experience,
+.achievements
 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
     
 }
+
+.achievements
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 10px;
+    
+}
+
+.achievements li{
+    font-size: smaller;
+}
+
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
@@ -75,7 +91,8 @@ h2 {
 
 .project,
 .job,
-.skill {
+.skill,
+.achi {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.242);
@@ -157,7 +174,7 @@ a,a:hover,a:visited,a:active, p, h3,h4{
 }
 
 
-.job , .project, .skill{
+.job , .project, .skill, .achi{
     position: relative;
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
@@ -165,7 +182,7 @@ a,a:hover,a:visited,a:active, p, h3,h4{
     
     z-index: 1;
   }  
-.job::before ,.project::before, .skill::before{
+.job::before ,.project::before, .skill::before, .achi::before{
     border-radius: 12px;
     position: absolute;
     content: '';
@@ -180,7 +197,7 @@ a,a:hover,a:visited,a:active, p, h3,h4{
     transition: opacity 0.5s linear;
     opacity: 0;
   }
-.job:hover::before , .project:hover::before, .skill:hover::before {
+.job:hover::before , .project:hover::before, .skill:hover::before, .achi:hover::before {
     border-radius: 12px;
     opacity: 1;
   }
