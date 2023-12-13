@@ -138,7 +138,8 @@ h2 {
     
 
 .project:hover,
-.job:hover {
+.job:hover,
+.achi:hover {
     transform: scale(1.05);
 }
 
@@ -174,7 +175,7 @@ a,a:hover,a:visited,a:active, p, h3,h4{
 }
 
 
-.job , .project, .skill, .achi{
+.job , .skill{
     position: relative;
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
@@ -182,7 +183,7 @@ a,a:hover,a:visited,a:active, p, h3,h4{
     
     z-index: 1;
   }  
-.job::before ,.project::before, .skill::before, .achi::before{
+.job::before, .skill::before{
     border-radius: 12px;
     position: absolute;
     content: '';
@@ -197,10 +198,69 @@ a,a:hover,a:visited,a:active, p, h3,h4{
     transition: opacity 0.5s linear;
     opacity: 0;
   }
-.job:hover::before , .project:hover::before, .skill:hover::before, .achi:hover::before {
+.job:hover::before .skill:hover::before{
     border-radius: 12px;
     opacity: 1;
   }
+
+
+
+.project{
+    position: relative;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #bd69d7 0%, #8666EF 100%);
+    
+    
+    z-index: 1;
+  }  
+.project::before{
+    border-radius: 12px;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #B73CF6 0%, #bd69d7 100%);
+    
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+.project:hover::before{
+    border-radius: 12px;
+    opacity: 1;
+}
+
+
+.achi, .project:last-child{
+    position: relative;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #bd69d7 0%, #B73CF6 100%);
+    
+    
+    z-index: 1;
+  }  
+.achi::before, .project:last-child::before{
+    border-radius: 12px;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #cea4d1 0%, #bd69d7 100%);
+    
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+.achi:hover::before, .project:last-child:hover::before{
+    border-radius: 12px;
+    opacity: 1;
+}
 
 
 .contact p {
